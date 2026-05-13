@@ -1,11 +1,15 @@
+import os
 import streamlit as st
 import pandas as pd
 import joblib
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # Load model artefacts
-model = joblib.load("Downloads/heart_Disease_fixed/logis_heart_model.pkl")
-scaler = joblib.load("Downloads/heart_Disease_fixed/heart_scaler.pkl")
-columns = joblib.load("Downloads/heart_Disease_fixed/heart_columns.pkl")
+model = joblib.load(os.path.join(BASE_DIR, "logis_heart_model.pkl"))
+scaler = joblib.load(os.path.join(BASE_DIR, "heart_scaler.pkl"))
+columns = joblib.load(os.path.join(BASE_DIR, "heart_columns.pkl"))
+expected_columns = list(columns)
 
 # ── Pre-scaler statistics from the original training dataset ─────────────────
 # These are the mean / std of the CONTINUOUS numeric columns in the Kaggle
