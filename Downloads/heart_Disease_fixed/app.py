@@ -3,9 +3,9 @@ import pandas as pd
 import joblib
 
 # Load model artefacts
-model            = joblib.load("logis_heart_model.pkl")
-scaler           = joblib.load("heart_scaler.pkl")
-expected_columns = joblib.load("heart_columns.pkl")
+model = joblib.load("Downloads/heart_Disease_fixed/logis_heart_model.pkl")
+scaler = joblib.load("Downloads/heart_Disease_fixed/heart_scaler.pkl")
+columns = joblib.load("Downloads/heart_Disease_fixed/heart_columns.pkl")
 
 # ── Pre-scaler statistics from the original training dataset ─────────────────
 # These are the mean / std of the CONTINUOUS numeric columns in the Kaggle
