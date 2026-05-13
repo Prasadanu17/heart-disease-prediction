@@ -23,8 +23,8 @@ PRE_SCALE_STATS = {
 st.markdown(
     """
     <h1 style='text-align: center;'>
-        ❤️🩺 Heart Disease Prediction by <br>
-        Anu 💻📊
+        ❤️🩺 Heart Disease Prediction <br>
+         💻📊
     </h1>
     """,
     unsafe_allow_html=True
